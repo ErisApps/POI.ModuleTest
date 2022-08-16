@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POI.ModuleLoaderHost", "POI.ModuleLoaderHost\POI.ModuleLoaderHost.csproj", "{FAC6A8E5-30F4-48C8-AE10-B0C379ACFA7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POI.Shared.Interfaces", "POI.Shared.Interfaces\POI.Shared.Interfaces.csproj", "{F868B8CB-445D-4A99-B372-03E0FDAEB3A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POI.DummyModule", "POI.DummyModule\POI.DummyModule.csproj", "{D7BF20BA-9A25-410A-9E45-CFC9F22BC798}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAC6A8E5-30F4-48C8-AE10-B0C379ACFA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC6A8E5-30F4-48C8-AE10-B0C379ACFA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC6A8E5-30F4-48C8-AE10-B0C379ACFA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC6A8E5-30F4-48C8-AE10-B0C379ACFA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F868B8CB-445D-4A99-B372-03E0FDAEB3A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F868B8CB-445D-4A99-B372-03E0FDAEB3A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F868B8CB-445D-4A99-B372-03E0FDAEB3A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F868B8CB-445D-4A99-B372-03E0FDAEB3A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BF20BA-9A25-410A-9E45-CFC9F22BC798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BF20BA-9A25-410A-9E45-CFC9F22BC798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BF20BA-9A25-410A-9E45-CFC9F22BC798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BF20BA-9A25-410A-9E45-CFC9F22BC798}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
