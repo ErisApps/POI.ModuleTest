@@ -10,7 +10,7 @@ namespace POI.ModuleLoaderHost
 	        var container = new Container();
 	        container.Register<ModuleLoader>();
 
-            var pluginFullPath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\..\\POI.DummyModule\\bin\\Debug\\net6.0\\POI.DummyModule.dll"));
+            var pluginFullPath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "../../../../POI.DummyModule/bin/Debug/net6.0/POI.DummyModule.dll"));
             var moduleLoader = container.Resolve<ModuleLoader>();
 
             do
