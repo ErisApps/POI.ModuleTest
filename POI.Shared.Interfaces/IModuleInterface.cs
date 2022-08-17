@@ -1,8 +1,10 @@
-﻿namespace POI.Shared.Interfaces
+﻿using DryIoc;
+
+namespace POI.Shared.Interfaces
 {
     public interface IModuleInterface
     {
-        void InitializeModule();
-        void UnloadModule();
+        void InitializeModule(IContainer container);
+        void UnloadModule(IContainer container);
     }
 }

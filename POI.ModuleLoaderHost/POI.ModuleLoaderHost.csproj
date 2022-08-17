@@ -11,4 +11,8 @@
         <ProjectReference Include="..\POI.Shared.Interfaces\POI.Shared.Interfaces.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="DryIoc.dll" Version="5.2.1" />
+    </ItemGroup>
+
 </Project>

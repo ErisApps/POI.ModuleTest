@@ -1,4 +1,5 @@
-﻿using POI.ModuleLoaderHost.Loader;
+﻿using DryIoc;
+using POI.ModuleLoaderHost.Loader;
 
 namespace POI.ModuleLoaderHost
 {
@@ -6,8 +7,11 @@ namespace POI.ModuleLoaderHost
     {
         public static void Main(string[] args)
         {
+	        var container = new Container();
+	        container.Register<ModuleLoader>();
+
             var pluginFullPath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, "..\\..\\..\\..\\POI.DummyModule\\bin\\Debug\\net6.0\\POI.DummyModule.dll"));
-            var moduleLoader = new ModuleLoader();
+            var moduleLoader = container.Resolve<ModuleLoader>();
 
             do
             {

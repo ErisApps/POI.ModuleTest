@@ -1,16 +1,19 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
+using DryIoc;
 using POI.Shared.Interfaces;
 
 namespace POI.ModuleLoaderHost.Loader
 {
     public class ModuleLoader
     {
-        private readonly Dictionary<string, WeakReference> _alcWeakRefDict;
+	    private readonly IContainer _container;
+	    private readonly Dictionary<string, WeakReference> _alcWeakRefDict;
 
-        public ModuleLoader()
+        public ModuleLoader(IContainer container)
         {
-            _alcWeakRefDict = new Dictionary<string, WeakReference>();
+	        _container = container;
+	        _alcWeakRefDict = new Dictionary<string, WeakReference>();
         }
 
         public uint LoadedModuleCount => (uint)_alcWeakRefDict.Count;
@@ -59,11 +62,11 @@ namespace POI.ModuleLoaderHost.Loader
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private static bool LoadInternal(string assemblyPath, [NotNullWhen(true)] out WeakReference? unloadableWeakRef)
+        private bool LoadInternal(string assemblyPath, [NotNullWhen(true)] out WeakReference? unloadableWeakRef)
         {
             try
             {
-                var alc = new HostAssemblyLoadContext(assemblyPath);
+                var alc = new HostAssemblyLoadContext(_container, assemblyPath);
 
                 unloadableWeakRef = new WeakReference(alc);
 
