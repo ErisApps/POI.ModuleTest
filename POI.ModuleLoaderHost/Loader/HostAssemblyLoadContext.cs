@@ -38,6 +38,8 @@ namespace POI.ModuleLoaderHost.Loader
             {
                 moduleInterface.UnloadModule();
             }
+
+            Unload();
         }
 
         protected override Assembly? Load(AssemblyName assemblyName)
