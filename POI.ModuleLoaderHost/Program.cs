@@ -17,10 +17,10 @@ namespace POI.ModuleLoaderHost
             {
                 switch (ListenToCommand())
                 {
-                    case KeyboardCommand.CommandLoad:
+                    case KeyboardCommand.Load:
                         moduleLoader.Load(pluginFullPath);
                         break;
-                    case KeyboardCommand.CommandUnload:
+                    case KeyboardCommand.Unload:
                         moduleLoader.Unload(pluginFullPath);
                         break;
                     default:
@@ -44,8 +44,8 @@ namespace POI.ModuleLoaderHost
 
         private enum KeyboardCommand
         {
-            CommandLoad,
-            CommandUnload
+            Load,
+            Unload
         }
     }
 }
